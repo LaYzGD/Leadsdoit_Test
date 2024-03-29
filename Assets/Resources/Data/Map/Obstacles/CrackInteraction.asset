@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CrackInteraction
   m_EditorClassIdentifier: 
   <Damage>k__BackingField: 1
-  <Friction>k__BackingField: 40
+  <Friction>k__BackingField: 20

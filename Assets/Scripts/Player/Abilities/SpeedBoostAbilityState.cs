@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class SpeedBoostAbilityState : MonoBehaviour
+public class SpeedBoostAbilityState : AbilityState
 {
-    // Start is called before the first frame update
-    void Start()
+    private float _movementSpeed;
+    private Rigidbody2D _rigidbody;
+    public SpeedBoostAbilityState(StateMachine stateMachine, float timeToFinish, float movementSpeed) : base(stateMachine, timeToFinish)
     {
-        
+        _movementSpeed = movementSpeed;
+        _rigidbody = player.Rigidbody;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Update()
     {
-        
+        base.Update();
+
+        if (IsFinished)
+        {
+            Machine.SetState(player.MoveState);
+        }
+    }
+
+    public override void PhysicsUpdate()
+    {
+        _rigidbody.velocity = new Vector2(0, _movementSpeed);
     }
 }

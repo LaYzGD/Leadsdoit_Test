@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BasePlayableCarData
   m_EditorClassIdentifier: 
   <BaseMovementSpeed>k__BackingField: {x: 4, y: 1}
-  <Acceleration>k__BackingField: 5
-  <AccelerationTime>k__BackingField: 2
-  <Brake>k__BackingField: 5
+  <Acceleration>k__BackingField: 20
+  <AccelerationTime>k__BackingField: 1
+  <Brake>k__BackingField: 10
   <BrakeTime>k__BackingField: 2
   <Deceleration>k__BackingField: 2
   <DecelerationTime>k__BackingField: 4
